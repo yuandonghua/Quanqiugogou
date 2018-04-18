@@ -1,0 +1,288 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#fff" >
+<RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/head_bg"  >
+
+            <TextView
+           
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+             android:text="类目"
+          
+         android:layout_centerVertical="true"
+           android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#cac9d1"  >
+
+        <RelativeLayout
+           
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/tv_xiaoxi"
+           >
+
+            <EditText
+                android:id="@+id/rl_search"
+               android:layout_width="match_parent"
+               android:hint="请输入要搜索的关键字"
+               android:gravity="center"
+               android:paddingLeft="10dp"
+               android:textColorHint="#a1a1a3"
+               android:textColor="#000000"
+               android:singleLine="true"
+               android:imeOptions="actionSearch"
+               android:drawableLeft="@drawable/search2"
+               android:layout_height="match_parent"
+               android:background="@drawable/rectangleread1"
+               android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+
+           
+
+        </RelativeLayout>
+
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/mainview"
+        android:layout_below="@+id/relativeLayout"
+        android:orientation="horizontal"
+        android:scrollbars="none" >
+
+        
+
+
+                 <ListView
+                      android:id="@+id/adresslistView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#d0d0d2"
+                    android:background="#f6f6f6"
+                      android:cacheColorHint="@android:color/transparent"
+                     android:listSelector="@null"
+                    android:dividerHeight="1px"
+                    android:layout_weight="6" >
+                </ListView>
+
+                 
+
+                <ListView
+                    android:id="@+id/storelistView"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@null"
+                    android:background="#fff"
+                    android:visibility="gone"
+                   
+                    android:layout_weight="4" >
+                </ListView>
+
+        </LinearLayout>
+   
+<LinearLayout
+        android:id="@+id/mainview"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mainviewbg"
+        android:baselineAligned="false" >
+
+        <RelativeLayout
+            android:id="@+id/imageButton1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+             android:paddingTop="6dp"
+          >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                 android:layout_centerHorizontal="true"
+              android:layout_above="@+id/vi"
+                android:src="@drawable/menu11" />
+				
+             <View 
+                 android:layout_width="fill_parent"
+                  android:layout_height="1px"
+                  android:layout_marginTop="1dp"
+                  android:layout_marginBottom="1dp"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true" 
+				  android:id="@+id/vi"
+				  android:visibility="invisible"
+                  android:background="#ff0000" 
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             android:layout_below="@+id/vi"
+                android:contentDescription="@null"
+            
+                android:text="首页"
+                  android:layout_centerHorizontal="true"
+                android:textColor="#5F646E"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+         android:paddingTop="6dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                 android:layout_centerHorizontal="true"
+              android:layout_above="@+id/vi1"
+                android:src="@drawable/menu2" />
+				
+             <View 
+                 android:layout_width="fill_parent"
+                  android:layout_height="1px"
+                  android:layout_marginTop="1dp"
+                  android:layout_marginBottom="1dp"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true" 
+				  android:id="@+id/vi1"
+                  android:background="#ff0000" 
+                    android:visibility="invisible"
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             android:layout_below="@+id/vi1"
+                android:contentDescription="@null"
+            
+                android:text="类目"
+                  android:layout_centerHorizontal="true"
+                    android:textColor="#E64139"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+       <RelativeLayout
+           android:id="@+id/imageButton3"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+          android:paddingTop="6dp"
+           android:layout_weight="1"
+          >
+ <LinearLayout
+               android:layout_width="wrap_content"
+                  android:layout_centerHorizontal="true"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal" >
+
+               <ImageView
+                   android:id="@+id/cart2"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:src="@drawable/menu33" />
+
+               <TextView
+                   android:id="@+id/num"
+                   android:layout_width="12dp"
+                   android:layout_height="12dp"
+                   android:background="@drawable/cart_num"
+                   android:gravity="center"
+                   android:text="@string/one"
+                   android:textColor="@color/white"
+                   android:textSize="8sp"
+                   android:visibility="gone" />
+
+           </LinearLayout>
+          
+
+           <View
+               android:id="@+id/vi2"
+               android:layout_width="fill_parent"
+               android:layout_height="1px"
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:layout_marginBottom="1dp"
+               android:layout_marginTop="1dp"
+                 android:visibility="invisible"
+               android:background="#ff0000" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/vi2"
+               android:layout_centerHorizontal="true"
+               android:contentDescription="@null"
+               android:text="购物车"
+               android:textColor="#5F646E"
+               android:textSize="12sp" />
+       </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/imageButton4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="6dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                 android:layout_centerHorizontal="true"
+              android:layout_above="@+id/vi4"
+                android:src="@drawable/menu44" />
+				
+             <View 
+                 android:layout_width="fill_parent"
+                  android:layout_height="1px"
+                  android:layout_marginTop="1dp"
+                  android:layout_marginBottom="1dp"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true" 
+				  android:id="@+id/vi4"
+				    android:visibility="invisible"
+                  android:background="#ff0000" 
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             android:layout_below="@+id/vi4"
+                android:contentDescription="@null"
+            
+                android:text="我的"
+                  android:layout_centerHorizontal="true"
+                 android:textColor="#5F646E"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

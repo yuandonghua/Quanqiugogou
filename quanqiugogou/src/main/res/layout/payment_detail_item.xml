@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+        
+        <TextView 
+            android:id="@+id/timeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_topbg"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/yellow"
+            />
+        
+        <ImageView 
+            android:id="@+id/img_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_line"
+            />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_bottombg"
+            android:orientation="vertical"
+            >
+            
+            <RelativeLayout 
+                android:id="@+id/top_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                
+                <TextView 
+                    android:id="@+id/opertypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                
+                <TextView 
+                    android:id="@+id/opervalueTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/opertypeTv"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    />
+                
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/bottom_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                
+                <TextView 
+                    android:id="@+id/showtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="10dp"
+                    android:text="变更后余额"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    />
+                
+                <TextView 
+                    android:id="@+id/currentValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/showtv"
+                    android:padding="10dp"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    />
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

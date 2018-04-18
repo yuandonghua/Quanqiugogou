@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="Deprecated">
+        <ignore path="res/layout/member_address_edit.xml" />
+    </issue>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/user_agree.xml" />
+    </issue>
+    <issue id="UseCompoundDrawables">
+        <ignore path="res/layout/activity_cart.xml" />
+        <ignore path="res/layout/brand_detail.xml" />
+        <ignore path="res/layout/product_list.xml" />
+        <ignore path="res/layout/search_result.xml" />
+    </issue>
+    <issue id="UseSparseArrays">
+        <ignore path="src/com/shopnum1/CartActivity.java" />
+    </issue>
+</lint>

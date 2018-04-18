@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '27.0.3'
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+
+
+
+    defaultConfig {
+        applicationId "com.shopnum1.distributionportal"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library')
+    implementation files('libs/MobLogCollector.jar')
+    implementation files('libs/MobTools.jar')
+    implementation files('libs/ShareSDK-Core-2.6.3.jar')
+    implementation files('libs/ShareSDK-QQ-2.6.3.jar')
+    implementation files('libs/ShareSDK-QZone-2.6.3.jar')
+    implementation files('libs/ShareSDK-SinaWeibo-2.6.3.jar')
+    implementation files('libs/ShareSDK-Wechat-2.6.3.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-2.6.3.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-2.6.3.jar')
+    implementation files('libs/alipaySDK-20150818.jar')
+    implementation files('libs/android-support-v13.jar')
+    implementation files('libs/libammsdk.jar')
+    implementation files('libs/locSDK_4.1.jar')
+    implementation files('libs/pushservice-4.5.3.48.jar')
+    implementation files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
+    implementation files('libs/volley.jar')
+    implementation files('libs/xUtils-2.6.14.jar')
+    implementation files('libs/zxing.jar')
+}

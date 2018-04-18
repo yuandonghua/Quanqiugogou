@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shopnum1.distributionportal"
+    android:versionCode="8"
+    android:versionName="3.1.4(150911001)" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	<!-- 微信支付 -->
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="com.shopnum1.distributionportal.util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="AkVmsOLTrP4NOcNnb4DKa4h0" />
+
+        <activity
+            android:name=".InitActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="shopnum1.com"
+                    android:scheme="m" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shopnum1.distributionportal.AssessShowActivity"
+             android:windowSoftInputMode="adjustPan" 
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name="com.shopnum1.distributionportal.SelectAgentActivity"
+             android:windowSoftInputMode="adjustPan" 
+             android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        
+        
+        <activity
+            android:name="com.shopnum1.distributionportal.RechargeActivity2"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="com.shopnum1.distributionportal.EntityshopActivity"
+                android:windowSoftInputMode="stateHidden|stateUnchanged"  
+            android:screenOrientation="portrait" />
+        
+        
+        <activity
+            android:name="com.shopnum1.distributionportal.PhotoshowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.DevelopVipActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.FindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.RefoundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.MyTeamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.AssessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.ReturnMoeny"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.JingDongActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.TenpayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.BannerWeb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.PayModeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.OrderAllToPay"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity2"
+            android:launchMode="singleTask"
+            
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+                android:windowSoftInputMode="stateHidden|stateUnchanged"  
+            android:theme="@style/Theme.TranslucentActionBar.ActionBar.Overlay"
+             
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shopnum1.distributionportal.LimitProductActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SearchMain"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SearchActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemberMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyMessageDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemberCollect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemberAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemberScore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemberScoreDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemberAddressEdit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserAgree"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserAbout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchResult"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductComment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductMore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CityList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderStatusActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderPost"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlipayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".KuaidiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BrandCenter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BrandDetail"
+            android:screenOrientation="portrait" 
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".FootPrint"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserLoginPwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserPayPwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UseScore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RefundGoods"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".RefundGoods2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OrderShow"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".BarcodeResultList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".PaymentDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".RechargeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.shopnum1.distributionportal.PayPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.shopnum1.distributionportal.PayPasswordActivity2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".AlipayRechargeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".RegistActivity2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+         <activity
+            android:name=".AnnouncementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.shopnum1.distributionportal.RecommendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.baidu.frontia.activity.share.FrontiaSocialOAuthActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.baidu.frontia.activity.share.FrontiaLocalShareActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.alipay.sdk.pay.demo.PayDemoActivity" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- alipay sdk end -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 易信分享回调 -->
+        <activity
+            android:name=".yxapi.YXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- QQ客户端回调 -->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ResultReceiver"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+
+            <intent-filter android:priority="1000" >
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- 支付宝分享回调 -->
+        <activity
+            android:name=".apshare.ShareEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		
+		<!--微信支付  -->
+		<activity
+            android:name=".PayActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wxf2f565574a968187"/>
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.weixin.paydemo.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.shopnum1.distributionportal.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        
+
+        <receiver
+            android:name="net.sourceforge.simcpux.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!--微信支付 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=".remote" />
+
+        <!-- push service start -->
+        <!-- 用于接收系统消息以保证PushService正常运行 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <!-- Push服务接收客户端发送的各种请求 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+        <!-- push结束 -->
+
+
+        <!-- 此处Receiver名字修改为当前包名路径 -->
+        <receiver android:name="com.shopnum1.distributionportal.PushTestReceiver" >
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind、setTags等method的返回结果 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <!-- 接收通知点击事件，和通知自定义内容 -->
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

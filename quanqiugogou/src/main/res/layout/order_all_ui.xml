@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/head_bg" >
+
+        <ImageView
+            android:id="@+id/order_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="商品订单"
+            android:id="@+id/tv_title"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_group"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_quanbu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableBottom="@drawable/bottom_cursor"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="全部"
+            android:textColor="@drawable/radio_button"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_fukuan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableBottom="@drawable/bottom_cursor"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="待付款"
+            android:textColor="@drawable/radio_button"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_fahuo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableBottom="@drawable/bottom_cursor"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="待发货"
+            android:textColor="@drawable/radio_button"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_shouhuo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableBottom="@drawable/bottom_cursor"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="待收货"
+            android:textColor="@drawable/radio_button"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_pingjia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableBottom="@drawable/bottom_cursor"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="待评价"
+            android:textColor="@drawable/radio_button"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        android:id="@+id/order_expand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:divider="#e5e5e5"
+        android:dividerHeight="1px"
+        android:groupIndicator="@null"
+        android:listSelector="@null" >
+    </com.handmark.pulltorefresh.library.PullToRefreshExpandableListView>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tile_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="tile" />
+
+    <TextView
+        android:id="@+id/remark_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tile_tv"
+        android:layout_above="@+id/announ_ll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:scrollbars="vertical"
+        
+        android:text="飞鹏网商晴隆站网站对外开放，取消二级返利，首次推荐的客户消费达到3000及累计消费满3000元可以成为会员" />
+
+    <LinearLayout
+        android:id="@+id/announ_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="创建时间:"  />
+
+            <TextView
+              android:id="@+id/create_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                 android:text="2017/08/24 21:00:57" />
+        </LinearLayout>
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <TextView
+              
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="修改时间:"  />
+
+            <TextView
+                android:id="@+id/modify_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                 android:text="2017/08/24 21:00:57" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<resources>
+    
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="gray">#C0C0C0</color>
+    <color name="yellow">#FF9900</color>
+    <color name="translucent">#B0000000</color>
+    <color name="head_bg">#E64138</color>
+    <color name="main_bg">#F6F6F6</color>
+    <color name="cart_bg">#77797D</color>
+    <color name="redbtn_bg">#D40B00</color>
+    <color name="list_bg">#F1F1F1</color>
+    <color name="green">#08AF53</color>  
+	<color name="navpage">#FFE1E8EB</color>
+    <color name="possible_result_points">#C0FFFF00</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#FF000000</color>
+    <color name="viewfinder_laser">#FFFF0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+
+</resources>
