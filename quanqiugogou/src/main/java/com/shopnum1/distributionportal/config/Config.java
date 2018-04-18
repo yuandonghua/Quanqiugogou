@@ -1,9 +1,9 @@
 package com.shopnum1.distributionportal.config;
 
 /**
- * @description: 配置文件
+ * @description: 配置控制类
  * @author: 袁东华
- * @time: created at 2017/5/18 上午11:22
+ * @time: created at 2018/4/18 下午4:54
  */
 public class Config {
     //是否输出日志

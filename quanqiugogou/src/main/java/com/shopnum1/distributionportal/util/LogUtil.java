@@ -7,14 +7,13 @@ import com.shopnum1.distributionportal.config.Config;
 
 
 /**
- * @description: Log工具，类似android.util.Log。
- * tag自动产生，格式: customTagPrefix:className.methodName(L:lineNumber),
- * customTagPrefix为空时只输出：className.methodName(L:lineNumber)。
- * @author:袁东华 created at 2016/9/27 13:18
+ * @description: log工具类
+ * @author: 袁东华
+ * @time: created at 2018/4/18 下午4:54
  */
 public class LogUtil {
 
-    public static String customTagPrefix = "lenovo_Config_log";
+    public static String customTagPrefix = "LogUtil";
 
     private LogUtil() {
     }
